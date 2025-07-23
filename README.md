@@ -18,6 +18,8 @@ It implements a **Signup form** using the **Nordhealth Design System (VET Theme)
 - Unit testing setup with **Vitest** and **@nuxt/test-utils**
 
 ## Tech Stack
+[DEMO](https://688123b24cb43d81410ca615--nordhealth-tt.netlify.app)
+```UI test page works only locally```
 
 - **Nuxt 3 (v3.17.6)**
 - **TypeScript**
@@ -32,3 +34,47 @@ It implements a **Signup form** using the **Nordhealth Design System (VET Theme)
 
 - Node.js v20.x+
 - npm v10.x+
+### Installation
+
+```bash
+npm install
+
+
+Development
+bash
+Copy
+Edit
+npm run dev
+```
+Project will run at:
+👉 http://localhost:3000/
+
+
+Project Structure
+``` 
+
+  /pages        → Application pages (index, success)
+  /layouts      → Application layouts
+  /components   → Vue components
+  /plugins      → Plugin to register Nordhealth components
+```
+Plugins
+```
+import "@provetcloud/css";
+import "@provetcloud/web-components";
+
+export default defineNuxtPlugin(() => {});
+```
+
+🧪 Running Tests
+Run all unit tests
+```
+npm run test
+
+```
+Design System
+Nordhealth Design System:
+
+
+Author
+Developed by Andrey Samaiev as part of the Senior Frontend Engineer assessment for Nordhealth.
