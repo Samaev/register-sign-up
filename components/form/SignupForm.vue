@@ -7,7 +7,6 @@
      label="Enter your email address"
      type="email"
      required
-     :id="'email-input'"
      :error="showValidation && (!email ? 'Email is required' : !validateEmail(email) ? 'Invalid email format' : '')"
    />
 
@@ -17,9 +16,7 @@
       :type="isPasswordVisible ? 'text' : 'password'"
       label="Password"
       required
-      :error="
-            showValidation && !password
-              ? 'Password is required'
+      :error="showValidation && !password ? 'Password is required'
               : showValidation && !validateStrongPassword(password)
               ? 'Password must be at least 8 characters, include a number and an uppercase letter'
               : ''
