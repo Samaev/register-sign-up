@@ -12,12 +12,28 @@
    </p>
   </NuxtLink>
 
-
+  <transition name="badge-slide" appear>
+   <div class="test-badge-wrapper">
+    <NuxtLink v-if="!isOnTestPage" to="/test-results">
+     <provet-button variant="success" size="small" class="test-badge">
+      🔬 Testing page
+     </provet-button>
+    </NuxtLink>
+    <NuxtLink v-else to="/">
+     <provet-button variant="primary" size="small" class="test-badge">
+      ⬅ Home
+     </provet-button>
+    </NuxtLink>
+   </div>
+  </transition>
  </header>
 </template>
 
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
+const isOnTestPage = computed(() => route.path === '/test-results')
 </script>
 
 
@@ -58,6 +74,31 @@
  margin: 0 auto;
 }
 
+.test-badge-wrapper {
+ margin-top: 1rem;
+}
 
+.test-badge {
+ animation: pulse 3s ease-in-out infinite;
+}
+
+.badge-slide-enter-active,
+.badge-slide-leave-active {
+ transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.badge-slide-enter-from {
+ transform: translateY(-20px);
+ opacity: 0;
+}
+.badge-slide-enter-to {
+ transform: translateY(0);
+ opacity: 1;
+}
+
+@keyframes pulse {
+ 0% { transform: scale(1); opacity: 1; }
+ 50% { transform: scale(1.05); opacity: 0.9; }
+ 100% { transform: scale(1); opacity: 1; }
+}
 
 </style>

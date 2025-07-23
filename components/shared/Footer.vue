@@ -1,7 +1,11 @@
 <template>
  <footer class="footer">
   <p>&copy; 2025 Nordhealth</p>
-
+  <nav class="footer-links">
+   <a href="https://nordhealth.design/?theme=vet/" target="_blank" rel="noopener noreferrer">Design System</a>
+   <a href="https://nordhealth.design/web-components/" target="_blank" rel="noopener noreferrer">Web Components Docs</a>
+   <NuxtLink to="/test-results">Testing Page</NuxtLink>
+  </nav>
  </footer>
 </template>
 
@@ -25,7 +29,12 @@
  font-weight: bold;
 }
 
-
+.footer-links {
+ display: flex;
+ justify-content: center;
+ gap: 1rem;
+ flex-wrap: wrap;
+}
 
 .footer-links a {
  color: white;
