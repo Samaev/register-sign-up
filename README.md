@@ -1,75 +1,34 @@
-# Nuxt Minimal Starter
+# Nordhealth Signup Task
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This project is a **client-side rendered** application built with **Nuxt 3**.  
+It implements a **Signup form** using the **Nordhealth Design System (VET Theme)** via Web Components.
+
+## Features
+
+- **Client-side only (SPA)**
+- Signup form with:
+    - Email (required with validation)
+    - Password (required with validation + visibility toggle)
+    - Optional checkbox for receiving product updates
+- Success page after registration
+- **Nordhealth Design System** components integration
+- Typed with **TypeScript**
+- Custom layout structure
+- ESLint and Prettier configuration
+- Unit testing setup with **Vitest** and **@nuxt/test-utils**
+
+## Tech Stack
+
+- **Nuxt 3 (v3.17.6)**
+- **TypeScript**
+- **Nordhealth CSS + Components**
+- **Vite**
+- **Vitest** (unit tests)
+- **ESLint**
 
 ## Setup
 
-Make sure to install dependencies:
+### Prerequisites
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Node.js v20.x+
+- npm v10.x+
