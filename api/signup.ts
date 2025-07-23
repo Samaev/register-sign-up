@@ -1,7 +1,7 @@
 export default defineEventHandler(async (event) => {
     const body = await readBody(event)
 
-    const { email, password, updatesApproved } = body || {}
+    const { email, password } = body || {}
 
     if (!email || !password) {
         return sendError(event, createError({
